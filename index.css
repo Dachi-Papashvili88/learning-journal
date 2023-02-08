@@ -294,157 +294,160 @@ h5 {
   text-align: center;
 }
   
-  @media (min-width: 550px) {
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background: #f5f5f5;
-    }
   
-    .container {
-      display: grid;
-      grid-template-areas:
-        "header header header"
-        "first first first"
-        "blog1 blog2 blog3"
-        "blog1 blog2 blog3"
-        "blog4 blog5 blog6"
-        "blog4 blog5 blog6"
-        "footer footer footer";
-      gap: 5px;
-      width: 70vw;
-      background: #ffffff;
-      margin: 0 auto;
-    }
-  
-    .header {
-      background-image: URL("images/image 17.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin: 21px 53px 23px 53px;
-    }
-  
-    #home {
-      margin-left: 450px;
-    }
-  
-    #first-div {
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 425px;
-      margin-top: -15px;
-    }
-  
-    .my-story {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    li > a {
-      text-decoration: none;
-      list-style: none;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: right;
-      color: #090909;
-    }
-  
-    .first-div h1 {
-      font-size: 40px;
-      line-height: 108.2%;
-      letter-spacing: -0.03em;
-      margin: 170px 20px 0 53px;
-    }
-  
-    .first-div-p {
-      font-size: 16px;
-      line-height: 20px;
-      margin: 20px 280px 0 53px;
-      justify-content: justify;
-      color: #ffffff;
-    }
-  
-    .div1-date {
-      margin-left: 53px;
-      margin-bottom: -150px;
-      padding-top: 240px;
-    }
-  
-    #learning-journal {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20.0379px;
-      line-height: 108.2%;
-      letter-spacing: -0.03em;
-      color: #0e0e0e;
-    }
-  
-    .my-photo {
-      margin: 90px 33px 50px 53px;
-    }
-  
-    .my-title > h1 {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 108.2%;
-      letter-spacing: -0.03em;
-      color: #151515;
-      margin: 111px 53px 50px 33px;
-    }
-    .my-title > p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      color: #151515;
-      margin-left: 33px;
-      margin-right: 53px;
-    }
-  
-    .my-learning > h5 {
-      font-size: 20px;
-      margin: 50px 53px 0 121px;
-    }
-  
-    .my-learning > p {
-      margin: 30px 53px 15px 121px;
-    }
-    .my-learning > h4 {
-      text-align: center;
-      margin: 51px 0 -20px 0;
-    }
-  
-    .blog > img {
-      width: 295px;
-    }
-  
-    .view-more {
-      display: none;
-    }
-  
-    .blog-img {
-      height: 182.98px;
-    }
-  
-    .my-journal > p,
-    h1,
-    h5 {
-      margin-left: 70px;
-    }
-    .my-journal > h5 {
-      font-size: 18px;
-    }
-  
-    .my-journal > img {
-      width: 90%;
-      height: 450px;
-      margin-left: 70px;
-    }
-  
-    .hidden-blog {
-      display: grid;
-    }
+/***** Desktop Version *****/
+
+@media (min-width: 900px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f5f5f5;
   }
-  
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "first first first"
+      "blog1 blog2 blog3"
+      "blog1 blog2 blog3"
+      "blog4 blog5 blog6"
+      "blog4 blog5 blog6"
+      "footer footer footer";
+    grid-gap: 0.313em;
+    background: #ffffff;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .header {
+    background-image: URL("images/image 17.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 1.313em 3.313em 1.438em 3.313em;
+  }
+
+  #home {
+    margin-left: 28.125em;
+  }
+
+  #first-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26.56em;
+    margin-top: -0.938em;
+  }
+
+  .my-story {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li > a {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    text-align: right;
+    color: #090909;
+  }
+
+  .first-div h1 {
+    font-size: 2.5rem;
+    line-height: 108.2%;
+    letter-spacing: -0.03em;
+    margin: 10.625em 1.25em 0 3.313em;
+  }
+
+  .first-div-p,
+  li > a,
+  .my-title > p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .first-div-p {
+    margin: 1.25em 17.5em 0 3.313em;
+    justify-content: justify;
+    color: #ffffff;
+  }
+
+  .div1-date {
+    margin-left: 3.313em;
+    margin-bottom: -150px;
+    padding-top: 15em;
+  }
+
+  #learning-journal {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.252rem;
+    line-height: 108.2%;
+    letter-spacing: -0.03em;
+    color: #0e0e0e;
+  }
+
+  .my-photo {
+    margin: 5.625em 20.063em 3.125em 3.313em;
+  }
+
+  .my-title > h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 108.2%;
+    letter-spacing: -0.03em;
+    color: #151515;
+    margin: 6.938em 3.313em 3.125em 2.063em;
+  }
+  .my-title > p {
+    font-weight: 400;
+    color: #151515;
+    margin-left: 2.063em;
+    margin-right: 3.313em;
+  }
+
+  .my-learning > h5 {
+    font-size: 20px;
+    margin: 3.125em 3.313em 0 7.563em;
+  }
+
+  .my-learning > p {
+    margin: 1.875em 3.313em 0.938em 7.563em;
+  }
+  .my-learning > h4 {
+    text-align: center;
+    margin: 3.188em 0 -1.25em 0;
+  }
+
+  .blog > img {
+    width: 18.438em;
+  }
+
+  .view-more {
+    display: none;
+  }
+
+  .blog-img {
+    height: 11.436em;
+  }
+
+  .my-journal > p,
+  h1,
+  h5 {
+    margin-left: 4.375em;
+  }
+  .my-journal > h5 {
+    font-size: 1.125rem;
+  }
+
+  .my-journal > img {
+    width: 90%;
+    height: 28.125em;
+    margin-left: 4.375em;
+  }
+
+  .hidden-blog {
+    display: grid;
+  }
+}
