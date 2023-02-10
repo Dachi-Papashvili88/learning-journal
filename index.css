@@ -12,17 +12,19 @@ body {
   list-style: none;
   justify-content: space-between;
   background-image: URL("images/image 17.png");
-  background-repeat: no-repeat;
   background-size: contain;
-  margin: 1.313em 1.5em 1.434em 1.25em;
-}
-
-#learning-journal {
-  margin-left: 1.625em;
+  background-repeat: no-repeat;
+  margin: 1.5em 1.5em 1em 1em;
+  position: relative;
 }
 
 #home {
-  margin-left: 5.375;
+  position: absolute;
+  right: 60px;
+  margin-top: 4px;
+}
+#learning-journal {
+  margin-left: 2em;
 }
 
 li > a {
@@ -59,8 +61,8 @@ li > a:hover {
     "blog5"
     "blog6"
     "footer";
-  background: #ffffff;
   width: 100%;
+  background: #ffffff;
 }
 
 header {
@@ -128,9 +130,10 @@ footer {
 }
 
 .first-div {
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url("images/article-image-hero.png");
   color: #ffffff;
-  height: 18.375em;
 }
 
 .div1-date {
@@ -146,15 +149,13 @@ footer {
   height: 14.5em;
 }
 
-.blog > img {
+.blog > img,
+.blogt-img {
   display: block;
   margin-bottom: 0.875em;
   margin: 2.5em auto;
   width: 90%;
-}
-
-.blog-img {
-  height: 13, 71em;
+  height: 13em;
 }
 
 .footer {
@@ -168,17 +169,13 @@ footer {
   margin-top: 2.688em;
 }
 
-/*Typography*/
-
-.first-div h1 {
+.first-div > h1 {
   font-size: 2rem;
-  line-height: 108.2%;
-  letter-spacing: -0.03em;
-  margin: 0.25em 0.625em;
+  margin: 0.25em 0.4em;
 }
 
 .first-div-p {
-  margin: 0.25em 0.625em;
+  margin: 0.25em 0.8em;
 }
 
 #about-myself > h4,
@@ -190,7 +187,6 @@ p {
 }
 
 .my-photo,
-.my-title > h1,
 .my-title > p,
 .my-learning > h5,
 .my-learning > p,
@@ -199,15 +195,27 @@ p {
   margin-left: 1.25em;
 }
 
+.my-learning > p,
+.my-title > p {
+  margin-right: 1.3em;
+}
+
+.my-title > h1 {
+  margin-left: 0.7em;
+}
+
 p,
 #about-myself > h1 {
   text-align: justify;
 }
 
 .my-journal > p,
-h1,
 h5 {
   margin: 0.563em 1.25em;
+}
+
+.my-journal > h1 {
+  margin-left: 0.7em;
 }
 
 .my-journal > img {
@@ -216,9 +224,15 @@ h5 {
 
 .blog-title {
   font-size: 1.5rem;
-  line-height: 108.2%;
   color: #141414;
-  margin: 0.563em 1.25em;
+  margin: 0.563em 0.8em;
+}
+
+.first-div > h1,
+.blog-title,
+.footer > h4 {
+  line-height: 108.2%;
+  letter-spacing: -0.03em;
 }
 
 .blog-p {
@@ -247,8 +261,6 @@ h5 {
 .footer > h4 {
   margin: 0.188em 0;
   font-size: 0.75rem;
-  line-height: 108.2%;
-  letter-spacing: -0.03em;
   color: #ececec;
 }
 
@@ -275,7 +287,8 @@ h5 {
 .blog-p,
 .blog-date,
 .footer > p,
-#about-myself > p {
+#about-myself > p,
+.my-title > p {
   font-weight: 400;
 }
 
@@ -293,18 +306,19 @@ h5 {
 #about-myself > h4 {
   text-align: center;
 }
-  
-  
-/***** Desktop Version *****/
 
-@media (min-width: 900px) {
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #f5f5f5;
+@media (min-width: 400px) {
+  .header {
+    position: relative;
   }
 
+  #home {
+    position: absolute;
+    right: 5.625em;
+  }
+}
+
+@media (min-width: 800px) {
   .container {
     display: grid;
     grid-template-areas:
@@ -317,46 +331,40 @@ h5 {
       "footer footer footer";
     grid-gap: 0.313em;
     background: #ffffff;
-    width: 75%;
-    margin: 0 auto;
   }
 
   .header {
-    background-image: URL("images/image 17.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 1.313em 3.313em 1.438em 3.313em;
+    position: relative;
   }
 
   #home {
-    margin-left: 28.125em;
+    position: absolute;
+    right: 8.125em;
   }
 
-  #first-div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 26.56em;
-    margin-top: -0.938em;
+  #about-me {
+    position: absolute;
+    top: 4px;
+    right: 10px;
   }
 
-  .my-story {
-    display: flex;
-    justify-content: space-between;
+  .hidden-blog {
+    display: grid;
   }
 
-  li > a {
-    text-decoration: none;
-    list-style: none;
-    font-weight: 600;
-    text-align: right;
-    color: #090909;
+  .my-journal > h5 {
+    margin-left: 4em;
   }
 
-  .first-div h1 {
+  .my-journal > h5 {
+    font-size: 1.125rem;
+  }
+
+  .first-div > h1 {
     font-size: 2.5rem;
     line-height: 108.2%;
     letter-spacing: -0.03em;
-    margin: 10.625em 1.25em 0 3.313em;
+    margin: 0 1.25em 0 1.313em;
   }
 
   .first-div-p,
@@ -366,88 +374,92 @@ h5 {
     line-height: 1.25rem;
   }
 
+  #learning-journal {
+    font-family: "Roboto";
+    font-size: 1.252rem;
+    color: #0e0e0e;
+  }
+
   .first-div-p {
-    margin: 1.25em 17.5em 0 3.313em;
+    margin: 1.25em 17.5em 0 3em;
     justify-content: justify;
     color: #ffffff;
   }
 
-  .div1-date {
-    margin-left: 3.313em;
-    margin-bottom: -150px;
-    padding-top: 15em;
-  }
-
-  #learning-journal {
-    font-family: "Roboto";
-    font-style: normal;
+  #learning-journal,
+  .my-title > h1 {
     font-weight: 700;
-    font-size: 1.252rem;
     line-height: 108.2%;
     letter-spacing: -0.03em;
-    color: #0e0e0e;
-  }
-
-  .my-photo {
-    margin: 5.625em 20.063em 3.125em 3.313em;
   }
 
   .my-title > h1 {
-    font-weight: 700;
     font-size: 2.25rem;
-    line-height: 108.2%;
-    letter-spacing: -0.03em;
     color: #151515;
-    margin: 6.938em 3.313em 3.125em 2.063em;
+    margin: 3em 0.5em 0.7em 0.5em;
   }
+
   .my-title > p {
-    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
     color: #151515;
-    margin-left: 2.063em;
-    margin-right: 3.313em;
+    margin: 3em 3em 0.7em 0.5em;
   }
 
   .my-learning > h5 {
-    font-size: 20px;
-    margin: 3.125em 3.313em 0 7.563em;
+    font-size: 1.25rem;
+    margin-left: 5.83em;
+  }
+
+  .my-journal > h4,
+  .my-learning > h4 {
+    text-align: center;
+  }
+
+  .my-story {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .div1-date {
+    padding-top: 10em;
+    margin-left: 4.5em;
+  }
+
+  .first-div {
+    padding-bottom: 10em;
+  }
+
+  .my-photo {
+    margin: 5.625em 2.063em 3.125em 3.313em;
   }
 
   .my-learning > p {
     margin: 1.875em 3.313em 0.938em 7.563em;
   }
   .my-learning > h4 {
-    text-align: center;
     margin: 3.188em 0 -1.25em 0;
-  }
-
-  .blog > img {
-    width: 18.438em;
   }
 
   .view-more {
     display: none;
   }
 
-  .blog-img {
-    height: 11.436em;
+  .my-journal > h1 {
+    margin-left: 2.2em;
   }
 
-  .my-journal > p,
-  h1,
-  h5 {
-    margin-left: 4.375em;
+  .my-journal > p {
+    margin: 1em 4.337em;
   }
-  .my-journal > h5 {
-    font-size: 1.125rem;
+
+  .date {
+    padding: 5em 1em 0 1em;
   }
 
   .my-journal > img {
     width: 90%;
     height: 28.125em;
     margin-left: 4.375em;
-  }
-
-  .hidden-blog {
-    display: grid;
   }
 }
